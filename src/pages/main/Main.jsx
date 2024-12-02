@@ -68,7 +68,7 @@ const Main = () => {
         <section className="section">
           <div className="section-header">
             <h2 className="section-title">🔥 HOT</h2>
-            <a href="/artwork" className="view-more">
+            <a href="OStest/artwork" className="view-more">
               전체보기 &gt;
             </a>
           </div>
