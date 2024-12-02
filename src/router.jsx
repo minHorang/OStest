@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App';
 import Main from './pages/main/Main';
 import Login from './pages/Login/Login';
@@ -13,68 +13,33 @@ import SignupStep2 from './pages/SignUp/SignUpStep2';
 import AuctionAdd from './pages/MyPage/auctionadd';
 import AuctionCompleted from './pages/Auction/AuctionCompleted';
 
-const router = createBrowserRouter(
-  [
-    {
-      path: '/',
-      element: <App />,
-      children: [
-        {
-          path: '',
-          element: <Main />,
-        },
-        {
-          path: 'login',
-          element: <Login />,
-        },
-        {
-          path: 'signup',
-          element: <SignupStep1 />,
-        },
-        {
-          path: 'signup/step2',
-          element: <SignupStep2 />,
-        },
-        {
-          path: 'mypage',
-          element: <MyPageWrapper />, // MyPageWrapper로 교체
-        },
-        {
-          path: 'mypage/auctionadd',
-          element: <AuctionAdd />,
-        },
-        {
-          path: 'mypage/workadd',
-          element: <Workadd />,
-        },
-        {
-          path: 'artwork',
-          element: <ArtWork />,
-        },
-        {
-          path: 'artwork/:id',
-          element: <ArtDetail />,
-        },
-        {
-          path: 'author',
-          element: <Author />,
-        },
-        {
-          path: 'auction/ongoing',
-          element: <AuctionOngoing />,
-        },
-        {
-          path: 'auction/completed',
-          element: <AuctionCompleted />,
-        },
-      ],
-    },
-  ],
-  {
-    basename: process.env.PUBLIC_URL, // basename 추가
-  }
-);
-
 export default function Router() {
-  return <RouterProvider router={router} />;
+  return (
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Routes>
+        {/* 최상위 App 컴포넌트 */}
+        <Route path="/" element={<App />}>
+          {/* 기본 경로 Main */}
+          <Route index element={<Main />} />
+          {/* 로그인 */}
+          <Route path="login" element={<Login />} />
+          {/* 회원가입 */}
+          <Route path="signup" element={<SignupStep1 />} />
+          <Route path="signup/step2" element={<SignupStep2 />} />
+          {/* 마이페이지 */}
+          <Route path="mypage" element={<MyPageWrapper />} />
+          <Route path="mypage/auctionadd" element={<AuctionAdd />} />
+          <Route path="mypage/workadd" element={<Workadd />} />
+          {/* 아트워크 */}
+          <Route path="artwork" element={<ArtWork />} />
+          <Route path="artwork/:id" element={<ArtDetail />} />
+          {/* 작가 페이지 */}
+          <Route path="author" element={<Author />} />
+          {/* 경매 */}
+          <Route path="auction/ongoing" element={<AuctionOngoing />} />
+          <Route path="auction/completed" element={<AuctionCompleted />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
