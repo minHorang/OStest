@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/OStest/static/css/main.9074ef3b.css",
+    "main.js": "/OStest/static/js/main.582229a6.js",
+    "static/media/BannerEx.png": "/OStest/static/media/BannerEx.e732df4ba7b06c054cdd.png",
+    "static/media/fa-solid-900.ttf": "/OStest/static/media/fa-solid-900.ad1782c70927ebc5bc87.ttf",
+    "static/media/fa-brands-400.ttf": "/OStest/static/media/fa-brands-400.26b80c8830bebf340211.ttf",
+    "static/media/fa-solid-900.woff2": "/OStest/static/media/fa-solid-900.83a538a018a9e44b023a.woff2",
+    "static/media/fa-brands-400.woff2": "/OStest/static/media/fa-brands-400.fdbb558523a380307689.woff2",
+    "static/media/fa-regular-400.ttf": "/OStest/static/media/fa-regular-400.05fdd87be89f7f8f0a1e.ttf",
+    "static/media/fa-regular-400.woff2": "/OStest/static/media/fa-regular-400.4f6a2dabee9c092d09b9.woff2",
+    "static/media/heart-shape-white.png": "/OStest/static/media/heart-shape-white.3d70b6334cb35847c440.png",
+    "static/media/MainLogo.png": "/OStest/static/media/MainLogo.0c5f85d1cdb2e259bad1.png",
+    "static/media/heart-shape-red.png": "/OStest/static/media/heart-shape-red.b658a8d3809ae0646b1d.png",
+    "static/media/fa-v4compatibility.ttf": "/OStest/static/media/fa-v4compatibility.fa86b3c85e77abbd2ebd.ttf",
+    "static/media/fa-v4compatibility.woff2": "/OStest/static/media/fa-v4compatibility.c3ea317a0f10f201597f.woff2",
+    "index.html": "/OStest/index.html",
+    "main.9074ef3b.css.map": "/OStest/static/css/main.9074ef3b.css.map",
+    "main.582229a6.js.map": "/OStest/static/js/main.582229a6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9074ef3b.css",
+    "static/js/main.582229a6.js"
+  ]
+}
