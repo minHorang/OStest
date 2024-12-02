@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page Styling */
+.my-page {
+  width: 100vw;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.artist_header {
+  background-color: #ffffff;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  flex: 0 0 8%;
+}
+
+/* Profile Section */
+.profile-section {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  flex: 0 0 30%;
+  margin-top: 20px;
+}
+
+.profile-image-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.profile-image {
+  font-size: 100px;
+  color: #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  overflow: hidden;
+  margin-left: 200px;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Edit Icon */
+.edit-icon {
+  position: absolute;
+  bottom: 30px;
+  right: -200px;
+  background-color: #ffffff;
+  color: #555;
+  font-size: 20px;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.edit-icon:hover {
+  background-color: #eeeeee;
+}
+
+.profile-info p {
+  margin: 20px 0px;
+  padding-left: 50px;
+  color: black;
+}
+
+.profile-info {
+  margin-left: 500px;
+}
+
+/* Interests Section */
+.interests-section {
+  width: 90%;
+  border: 2px solid #e5a23b;
+  padding: 10px;
+  flex: 0 0 30%;
+  position: relative;
+}
+
+.interests-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.interest-name {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.edit-text {
+  font-size: 1em;
+  background-color: #e5a23b;
+  padding: 5px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 2px;
+}
+
+.interests-images {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  white-space: nowrap;
+  max-width: 100%;
+  width: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: #e5a23b #f0f0f0;
+}
+
+.interest-image {
+  flex: 0 0 auto;
+  width: 150px;
+  height: 150px;
+  background-color: #ccc;
+  margin: 10px 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.interest-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.interest-image:hover img {
+  transform: scale(1.1);
+}
+
+/* 회색 오버레이 제거 */
+.interest-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background-color: transparent; /* 회색 배경 제거 */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* 작품명 표시 제거 */
+.interest-image:hover p {
+  opacity: 0;
+}
+
+/* Auction Section */
+.auction-section {
+  width: 90%;
+  border-bottom: 2px solid #e5a23b;
+  border-left: 2px solid #e5a23b;
+  border-right: 2px solid #e5a23b;
+  padding: 10px;
+  flex: 0 0 30%;
+}
+
+.auction-name {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.auction-item-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.auction-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #eee;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.auction-item:hover {
+  background-color: rgba(64, 64, 64, 0.7);
+}
+
+.auction-item p,
+.auction-item span {
+  margin: 0;
+}
+
+.no-auctions {
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 1em 0;
+}
+
+/* X 버튼 스타일 */
+.delete-icon {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 16px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.add-artwork {
+  font-size: 1em;
+  color: #000000;
+  background-color: #ffffff;
+  padding: 5px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  position: absolute;
+  bottom: 10px;
+  right: 140px;
+}
+
+.delete-artwork {
+  font-size: 1em;
+  color: #000000;
+  background-color: #ffffff;
+  padding: 5px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
+
+.add-artwork:hover,
+.delete-artwork:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
+.auction-name {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.interests-images::-webkit-scrollbar {
+  height: 8px;
+}
+
+.interests-images::-webkit-scrollbar-thumb {
+  background-color: #e5a23b;
+  border-radius: 4px;
+}
+
+.interests-images::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}

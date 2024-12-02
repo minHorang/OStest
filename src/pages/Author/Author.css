@@ -1,0 +1,117 @@
+/* 전체 컨테이너 */
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 정렬 필터 */
+.sort-filter {
+  justify-content: flex-start;
+  align-self: flex-start;
+  gap: 10px;
+  font-size: 1rem;
+  margin-top: 5%;
+  margin-left: 7%;
+  padding: 1%;
+}
+
+/* 정렬 필터 항목 */
+.sort-item {
+  cursor: pointer;
+  color: black;
+  font-weight: 600;
+}
+
+.sort-item.active {
+  color: orange;
+}
+
+/* 아트워크 그리드 */
+.art-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  width: 80%;
+  justify-content: center;
+}
+
+/* 아트 카드 */
+.art-card {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  box-shadow: 0 0 0 1px #d1d1d1;
+  overflow: hidden;
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+}
+
+/* 아트 텍스트 */
+.art-text {
+  padding: 30px 10px;
+  background-color: #fff;
+  text-align: left;
+  margin-top: 20px;
+}
+
+/* 아트 상세 정보 */
+.art-details {
+  font-size: 0.9rem;
+  color: #666;
+  padding: 1%;
+  margin-top: 1%;
+  text-align: left;
+}
+
+/* 팔로워 아이콘 및 숫자 */
+.art-followers {
+  display: flex;
+  align-items: center;
+  margin: 3px;
+  font-size: 14px;
+  color: #333;
+}
+
+.follower-icon {
+  font-size: 0.9rem;
+  margin-right: 1px;
+}
+
+.follower-count {
+  font-weight: none;
+  font-size: 0.9rem;
+}
+
+/* 페이지네이션 */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* 페이지네이션 버튼 */
+.pagination .page-button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #eee;
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: #333;
+  border-radius: 3px;
+  transition: background-color 0.2s;
+}
+
+.pagination .page-button:hover {
+  background-color: #f0f0f0;
+}
+
+.pagination .page-button.active {
+  background-color: transparent;
+  color: #333;
+  border: 1px solid #eee;
+}
