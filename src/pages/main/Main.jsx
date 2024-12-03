@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Main.css';
 import OrangeUnderLine from '../../img/OrangeUnderLine.png';
 import BannerEx from '../../img/BannerEx.png';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import AuctionModal from '../Auction/Modal/AuctionModal';
 
 const Main = () => {
@@ -68,9 +68,9 @@ const Main = () => {
         <section className="section">
           <div className="section-header">
             <h2 className="section-title">🔥 HOT</h2>
-            <a href="OStest/artwork" className="view-more">
+            <Link to="/artwork" className="view-more">
               전체보기 &gt;
-            </a>
+            </Link>
           </div>
           <img src={OrangeUnderLine} className="underbar" />
           <div className="item-list">
@@ -91,9 +91,9 @@ const Main = () => {
         <section className="section">
           <div className="section-header">
             <h2 className="section-title">경매중</h2>
-            <a href="/auction/ongoing" className="view-more">
+            <Link to="/auction/ongoing" className="view-more">
               전체보기 &gt;
-            </a>
+            </Link>
           </div>
           <img src={OrangeUnderLine} className="underbar" />
           <div className="item-list">
@@ -117,9 +117,9 @@ const Main = () => {
         <section className="section">
           <div className="section-header">
             <h2 className="section-title">인기 작가</h2>
-            <a href="/author" className="view-more">
+            <Link to="/author" className="view-more">
               전체보기 &gt;
-            </a>
+            </Link>
           </div>
           <img src={OrangeUnderLine} className="underbar" />
           <div className="circle-list">

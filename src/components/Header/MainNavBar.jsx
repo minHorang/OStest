@@ -2,7 +2,7 @@ import React, { useState } from 'react'; // useState 추가
 import './MainNavBar.css';
 import Logo from '../../img/MainLogo.png';
 import SearchIcon from '../../img/SearchIcon.png';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const MainNavBar = () => {
   const [showAuctionMenu, setShowAuctionMenu] = useState(false); // 상태 추가
@@ -26,9 +26,9 @@ const MainNavBar = () => {
   return (
     <header className="Mainheader">
       <div className="header-left">
-        <a href="/">
+        <Link to="/">
           <img src={Logo} alt="팔아보자GO" className="header-logo" />
-        </a>
+        </Link>
       </div>
 
       <div className="header-center">
@@ -40,23 +40,23 @@ const MainNavBar = () => {
       </div>
 
       <div className="header-right">
-        <a href="/login" className="header-link">
+        <Link to="/login" className="header-link">
           login
-        </a>
+        </Link>
         <span className="divider">|</span>
-        <a href="/mypage" className="header-link">
+        <Link to="/mypage" className="header-link">
           mypage
-        </a>
+        </Link>
       </div>
 
       <div className="header-bottom">
         <nav className="header-nav">
-          <a href="/artwork" className="nav-link">
+          <Link to="/artwork" className="nav-link">
             작품
-          </a>
-          <a href="/author" className="nav-link">
+          </Link>
+          <Link to="/author" className="nav-link">
             작가
-          </a>
+          </Link>
           <div
             className="nav-link auction-link"
             onMouseEnter={() => setShowAuctionMenu(true)}
@@ -65,12 +65,12 @@ const MainNavBar = () => {
             경매
             {showAuctionMenu && (
               <div className="dropdown-menu">
-                <a href="/auction/ongoing" className="dropdown-item">
+                <Link to="/auction/ongoing" className="dropdown-item">
                   진행중 경매
-                </a>
-                <a href="/auction/completed" className="dropdown-item">
+                </Link>
+                <Link to="/auction/completed" className="dropdown-item">
                   완료된 경매
-                </a>
+                </Link>
               </div>
             )}
           </div>
